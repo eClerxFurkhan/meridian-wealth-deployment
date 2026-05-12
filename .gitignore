@@ -15,13 +15,14 @@ env/
 # Secrets
 .env
 .env.local
+.env.pk
 *.pem
 
 # Project data / build artefacts
 vectorstore/*
 !vectorstore/.gitkeep
 data/*.db
-data/*.db-journal
+# data/*.db-journal
 
 # IDE
 .idea/
