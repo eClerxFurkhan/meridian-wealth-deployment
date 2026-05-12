@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meridian Wealth — Analyst Agent</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">M</div>
+        <div class="title-block">
+          <h1>Meridian Wealth</h1>
+          <p class="subtitle">Financial Analyst Agent</p>
+        </div>
+      </div>
+      <div class="status">
+        <span id="status-dot" class="dot dot--unknown" aria-hidden="true"></span>
+        <span id="status-text">checking…</span>
+        <button id="new-chat" class="ghost-btn" title="Start a new conversation">New chat</button>
+      </div>
+    </header>
+
+    <main id="messages" class="messages" aria-live="polite">
+      <div class="welcome">
+        <h2>How can I help today?</h2>
+        <p>Ask about a client portfolio, market data, policy guidelines, or live market news.</p>
+        <div class="suggestions">
+          <button class="suggestion">Prepare a briefing for client CLT-001</button>
+          <button class="suggestion">What's our concentration limit policy?</button>
+          <button class="suggestion">How is the IT sector performing YTD?</button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="composer">
+      <div class="composer-row">
+        <textarea
+          id="input"
+          rows="1"
+          placeholder="Ask the analyst…  (Enter to send, Shift+Enter for newline)"
+          autocomplete="off"
+        ></textarea>
+        <button id="send" class="send-btn" aria-label="Send">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="composer-meta">
+        <label class="trace-toggle">
+          <input type="checkbox" id="trace-toggle" checked />
+          <span>Show tool-call trace</span>
+        </label>
+        <span id="conv-id" class="conv-id"></span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
